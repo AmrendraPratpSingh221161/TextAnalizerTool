@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins" , sans-serif;
+        }
+        body{
+            background-color: #3d7ff9;
+        }
+        .wrapper{
+            position: absolute;
+            width: 31.25em;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+           
+        }
+        .inp-container{
+            background-color: #010f2a;
+            padding: 4em 2em;
+            border-radius: 0.5em;
+        }
+        h1{
+            text-align: center;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 1em;
+            
+        }
+        textarea{
+            resize: none;
+            width: 100%;
+            border: none;
+            padding: 1em;
+            
+            border-radius: 0.5em;
+            background-color: rgba(64, 8, 116, 0.466);
+            outline: none;
+            color: #ffffff;
+        }
+        #analyzerButton{
+            color: #ffffff;
+            width: 100%;
+            background-color: #3d7ff9;
+            border-radius: 0.5em;
+            position: relative;
+            padding: 1.5em 0;
+            margin: 2em 0em;
+        }
+        #results{
+            width: 120%;
+            position: relative;
+            right: 10%;
+            background-color: #ffffff;
+            margin-top: -8em;
+            z-index: -1;
+            padding: 10em 2em 3em 2em;
+            border-radius: 0.5em;
+        }
+        .output-container{
+            font-weight: 500;
+        }
+        .output-container span{
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inp-container">
+        <h1>Text Analyzer</h1>
+        <textarea id="textInput" placeholder="Paste or type your text here" rows="3"></textarea>
+        <button id="analyzerButton">Analyze</button>
+    </div>
+    <div id="results"
+        class="output-container">
+        <p>Word count: <span id="wordCount">0</span></p> 
+        <p>Character count: <span id="charCount">0</span></p> 
+        <p>Sentence count: <span id="sentCount">0</span></p> 
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
